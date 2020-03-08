@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+class ContactList extends Component{
+    render(){
+        const people = [
+            {name: 'Tyler'},
+            {name:'Chris'}, 
+            {name: 'Adam'}]
+        
+        const element = <ol>
+            {people.map(person => <li key = {person.name}> {person.name}</li>)}
+        </ol>
+        
+        return element;
+    }
+}
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(<ContactList/>, document.getElementById('root'));

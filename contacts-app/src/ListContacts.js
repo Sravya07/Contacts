@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ListContacts(props) {
+const ListContacts = (props) => {
     return (
         <ol className='contact-list'>
             {props.contacts.map((contact) =>
@@ -18,7 +18,7 @@ function ListContacts(props) {
                     </button>
                 </li>)}
         </ol>
-    )
+    );
 
-}
+};
 export default ListContacts
